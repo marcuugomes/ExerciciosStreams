@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class main2 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         Turma turma = new Turma();
 
@@ -35,7 +35,22 @@ public class main2 {
         turma.listaTodosAlunos();
         */
 
+
+        /*
         turma.backupTurma();
+        turma.listaTodosAlunos();
+        turma.resetTurma();
+        turma.lerTurmaFicheiro("turmaBackup");
+        System.out.println("Depois do backup");
+        turma.listaTodosAlunos();
+        */
+
+        turma.serializarTurma();
+        turma.resetTurma();
+        turma.listaTodosAlunos();
+
+        turma.lerTurma();
+        turma.listaTodosAlunos();
 
 
 
